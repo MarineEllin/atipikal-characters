@@ -5,6 +5,4 @@ import Homepage from "../../components/Homepage.vue";
 test("mount the homepage component", () => {
     const wrapper = mount(Homepage);
     expect(wrapper.isVisible);
-
-
 });

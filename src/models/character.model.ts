@@ -7,4 +7,12 @@ export interface CharacterObject {
         path: string;
         extension: string;
     }
+    series?: {
+        "items": [
+          {
+            resourceURI: string;
+            name: string;
+          }
+        ]
+      }
   }

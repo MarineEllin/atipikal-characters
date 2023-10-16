@@ -4,10 +4,10 @@ import CharacterCard from "../../components/CharacterCard.vue";
 import { type CharacterObject } from '../../models/character.model';
 
 test("mount the CharacterCard component", () => {
-
+    const expectedName = "MonHeroToto";
     const character: CharacterObject= {
         id: 1,
-        name: "test",
+        name: expectedName,
         description: "test",
         ressourceURI: "test",
         thumbnail: {
@@ -22,5 +22,5 @@ test("mount the CharacterCard component", () => {
         },
     });
 
-    expect(wrapper.html()).toContain("test");
+    expect(wrapper.html()).toContain(expectedName);
 });

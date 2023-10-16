@@ -16,8 +16,6 @@ const params = new URLSearchParams({
 
 const requestUrl = `${url}${params.toString()}`;
 
-console.log(requestUrl);
-
 export const fetchCharacters = async () => {
     try {
       const response = await fetch(requestUrl, {

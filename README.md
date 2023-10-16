@@ -41,11 +41,11 @@ VITE_PUBLIC_KEY= <YOUR PUBLIC KEY>
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+<!-- ### Type-Check, Compile and Minify for Production
 
 ```sh
 npm run build
-```
+``` -->
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
@@ -59,10 +59,12 @@ npm run test:unit
 npm run test:e2e:dev
 ```
 
-This runs the end-to-end tests against the Vite development server.
+Remember to lauch the app using "npm run dev" before running the End-to-End Tests
+
+<!-- This runs the end-to-end tests against the Vite development server.
 It is much faster than the production build.
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments): -->
 
 <!-- ```sh
 npm run build

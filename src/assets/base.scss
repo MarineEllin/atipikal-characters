@@ -1,0 +1,49 @@
+:root {
+  --font-family: 'Inter', sans-serif;
+  --primary: #fb553c;
+  --secondary: #2F4858;
+  --grey-dark: #504a4a;
+  --text-color: #000000;
+  --grey-light: #e5dede;
+  --blue: #518cca;
+  --white: #ffffff;
+  --border-radius: 2px;
+  --box-shadow: rgba(229, 222, 222, 1) 0px 1px 2px 0px,
+  rgba(229, 222, 222, 0.8) 0px 2px 6px 2px;;
+}
+
+// reset css
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--white);
+}
+
+
+

@@ -29,3 +29,4 @@ coverage
 
 # local env files
 .env*.local
+cypress.env.json

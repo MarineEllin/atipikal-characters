@@ -13,7 +13,10 @@ const params = new URLSearchParams({
     limit: "30",
 });
 
+
 const requestUrl = `${url}${params.toString()}`;
+
+console.log(requestUrl);
 
 export const fetchCharacters = async () => {
     try {

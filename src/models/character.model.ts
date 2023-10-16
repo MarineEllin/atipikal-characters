@@ -7,7 +7,7 @@ export interface CharacterObject {
         path: string;
         extension: string;
     }
-    series?: {
+    series: {
         "items": [
           {
             resourceURI: string;

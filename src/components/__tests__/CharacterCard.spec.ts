@@ -13,7 +13,15 @@ test("mount the CharacterCard component", () => {
         thumbnail: {
             path: "test",
             extension: "test",
-        }
+        },
+        series: {
+            "items": [
+              {
+                resourceURI: "string",
+                name: "string",
+              }
+            ]
+          }
     };
 
     const wrapper = mount(CharacterCard, {

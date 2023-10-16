@@ -2,8 +2,8 @@ import {MD5} from "crypto-js";
 
 describe("Check first request type", () => {
 
-    const privateKey = "a023716308f5834888aad4c6bdb321c2a413d174";
-    const publicKey = "ad03578d5d9923b867905c6485d3f738";
+    const privateKey = import.meta.env.VITE_PRIVATE_KEY;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
     const timestamp = new Date().getTime();
     const hash = MD5(`${timestamp}${privateKey}${publicKey}`);
     const url = "http://gateway.marvel.com/v1/public/characters?";

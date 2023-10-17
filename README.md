@@ -59,8 +59,6 @@ npm run test:unit
 npm run test:e2e:dev
 ```
 
-Remember to lauch the app using "npm run dev" before running the End-to-End Tests
-
 <!-- This runs the end-to-end tests against the Vite development server.
 It is much faster than the production build.
 

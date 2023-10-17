@@ -12,8 +12,6 @@ const params: URLSearchParams = new URLSearchParams({
     hash: hash.toString(),
 });
 
-
-
 export const fetchCharacterById = async(characterId: string | string[]) => {
     try {
         const response = await fetch(`${url}${characterId}?${params.toString()}`, {

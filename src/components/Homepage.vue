@@ -23,9 +23,8 @@
     </div>
     </Suspense>  
 </template>
-    
-    
-    
+   
+       
 <style lang="scss" scoped>
 
 @use "../assets/mixins.scss" as mixin;

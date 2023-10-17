@@ -5,9 +5,7 @@
     <div class="loadingContainer">
         <div class="loader"></div>
     </div>
-</template>
-    
-    
+</template>   
     
 <style lang="scss" scoped>
 .loadingContainer {

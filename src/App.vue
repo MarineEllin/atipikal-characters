@@ -2,7 +2,6 @@
 import TheHeader from "./components/Header.vue";
 import TheFooter from "./components/Footer.vue";
 import Loading from "./components/Loading.vue";
-
 </script>
 
 <template>
@@ -14,9 +13,7 @@ import Loading from "./components/Loading.vue";
                     <suspense>
                         <component :is="Component"></component>
                         <template #fallback>
-
                             <Loading />
-
                         </template>
                     </suspense>
                 </keep-alive>

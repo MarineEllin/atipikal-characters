@@ -8,10 +8,7 @@
 <script setup lang="ts">
 </script>
     
-    
 <style lang="scss" scoped>
-    // @use './assets/base.scss' as *;
-
     .footer {
         display: flex;
         flex-direction: column;

@@ -80,7 +80,7 @@ const imagePath = computed(() => {
         flex: 1;
         background-repeat: no-repeat;
         background-size: cover;
-        @include mixin.xs-medium {
+        @include mixin.xsToLarge {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -114,23 +114,18 @@ const imagePath = computed(() => {
             display: flex;
             align-items: center;
             gap: 50px;
-            @include mixin.xs-medium {
+            @include mixin.xsToLarge {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                gap: 20px;
             }
             .imageContainer {
                 width: 400px;
                 height: 600px;
                 flex: 0 0 auto;
-                @include mixin.large {
-                        width: 300px;
-                        height: 450px;
-                    }
-                @include mixin.xs-medium {
-                        width: 220px;
-                        height: 220px;
+                @include mixin.xsToLarge {
+                        width: 230px;
+                        height: 230px;
                     }
                     
                 img {
@@ -138,12 +133,8 @@ const imagePath = computed(() => {
                     height: 600px;
                     object-fit: cover;
                     border-radius: var(--border-radius);
-                    @include mixin.large {
-                        width: 300px;
-                        height: 450px;
-                    }
-                    @include mixin.xs-medium {
-                        width: 220px;
+                    @include mixin.xsToLarge {
+                        width: 230px;
                         height: 100%;
                         border-radius: 50%;
                     }
@@ -153,47 +144,43 @@ const imagePath = computed(() => {
                 max-width: 600px;
                 display: flex;
                 flex-direction: column;
-                gap:20px;
-                @include mixin.xs-medium {
-                        gap:10px;
+                gap:30px;
+                @include mixin.xsToLarge {
+                        align-items: center;
                     }
                 h2 {
                     font-size: 32px;
                     color: var(--primary);
-                    @include mixin.xs-medium {
+                    @include mixin.xsToLarge {
                         font-size: 24px;
                     }
                 }
                 .description {
                     color: var(--white);
+                    @include mixin.xsToLarge {
+                        text-align: center;
+                    }
                 }
                 .listContainer {
                     display: flex;
                     gap: 20px;
-                    @include mixin.xs-medium {
+                    @include mixin.xsToLarge {
                         flex-direction: column;
-                        gap: 10px;
+                        justify-content: center;
+                        align-items: center;
                     }
                     h3 {
                         color: var(--primary);
                         font-size: 16px;
-                        @include mixin.xs-medium {
-                        font-size: 14px;
-                        @include mixin.large {
-                            font-size: 14px;
-                        }
-                    }
                     }
                     ul {
+                        line-height: 24px;
+                        @include mixin.xsToLarge {
+                        text-align: center;
+                    }
                         li {
                             font-size: 16px;
                             color: var(--white);
-                            @include mixin.xs-medium {
-                                font-size: 14px;
-                            }
-                            @include mixin.large {
-                            font-size: 14px;
-                            }
                         }
                     }
                 }

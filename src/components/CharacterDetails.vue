@@ -124,15 +124,24 @@ const imagePath = computed(() => {
                 width: 400px;
                 height: 600px;
                 flex: 0 0 auto;
+                @include mixin.large {
+                        width: 300px;
+                        height: 450px;
+                    }
                 @include mixin.xs-medium {
                         width: 220px;
                         height: 220px;
                     }
+                    
                 img {
                     width: 400px;
                     height: 600px;
                     object-fit: cover;
                     border-radius: var(--border-radius);
+                    @include mixin.large {
+                        width: 300px;
+                        height: 450px;
+                    }
                     @include mixin.xs-medium {
                         width: 220px;
                         height: 100%;
@@ -170,6 +179,9 @@ const imagePath = computed(() => {
                         font-size: 16px;
                         @include mixin.xs-medium {
                         font-size: 14px;
+                        @include mixin.large {
+                            font-size: 14px;
+                        }
                     }
                     }
                     ul {
@@ -178,6 +190,9 @@ const imagePath = computed(() => {
                             color: var(--white);
                             @include mixin.xs-medium {
                                 font-size: 14px;
+                            }
+                            @include mixin.large {
+                            font-size: 14px;
                             }
                         }
                     }

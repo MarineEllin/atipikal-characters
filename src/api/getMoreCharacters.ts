@@ -6,17 +6,18 @@ const timestamp = new Date().getTime();
 const hash = MD5(`${timestamp}${privateKey}${publicKey}`);
 const url = "http://gateway.marvel.com/v1/public/characters?";
 
-const params = new URLSearchParams({
+export const fetchMoreCharacters = async (offset:number, limit:number) => {
+
+    const params = new URLSearchParams({
     apikey: publicKey,
     ts: String(timestamp),
     hash: hash.toString(),
-    limit: "60",
-});
+    offset: offset.toString(),
+    limit: limit.toString(),
+    });
 
+    const requestUrl = `${url}${params.toString()}`;
 
-const requestUrl = `${url}${params.toString()}`;
-
-export const fetchCharacters = async () => {
     try {
       const response = await fetch(requestUrl, {
         method: "GET",

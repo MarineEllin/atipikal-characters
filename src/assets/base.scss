@@ -40,5 +40,20 @@ body {
   background-color: var(--white);
 }
 
+// btn
+
+.btn {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  &:hover {
+    opacity: 0.8;
+  }
+}
 
 

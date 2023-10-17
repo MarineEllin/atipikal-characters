@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router';
 import {computed, reactive} from "vue";
 import { useCharactersStore } from '@/stores/characters';
 import type { CharacterObject } from '@/models/character.model';
-import { fetchCharacterById } from '@/api/characterDetails';
+import { fetchCharacterById } from '@/api/getCharacterDetails';
 
 const route = useRoute();
 const charactersStore = useCharactersStore();

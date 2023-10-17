@@ -83,6 +83,10 @@ const imagePath = computed(() => {
                 right: 20px;
                 font-size: 24px;
                 color: var(--primary);
+                transition: all 0.5s;
+                &:hover {
+                    transform: rotate(360deg);
+                }
             }
         &:after {
             position: absolute;

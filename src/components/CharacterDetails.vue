@@ -1,22 +1,35 @@
 <script setup lang="ts">
-import { fetchCharacterById } from '@/api/characterDetails';
 import { useRoute } from 'vue-router';
-import {reactive, ref, computed} from "vue";
+import {computed, reactive} from "vue";
+import { useCharactersStore } from '@/stores/characters';
 import type { CharacterObject } from '@/models/character.model';
-  
-const route = useRoute();
+import { fetchCharacterById } from '@/api/characterDetails';
 
-const character = ref<CharacterObject | null>(null);
+const route = useRoute();
+const charactersStore = useCharactersStore();
+const characterIdString = route.params.characterId.toString();
+const getCharacter = charactersStore.getCharacterById;
+const characterFromStore = getCharacter(characterIdString);
+
+let character: CharacterObject;
+
+if(characterFromStore) {
+    character = reactive(characterFromStore);
+} else {
+    const {data} = await fetchCharacterById(characterIdString);
+    character = reactive(data.results[0]);
+}
+
+console.log(characterIdString);
+console.log(character);
+
 const backgroundImageFormat = "/landscape_incredible.";
 const imageFormat = "/portrait_incredible."
 
-const { data } = await fetchCharacterById(route.params.characterId);
-character.value = reactive(data.results[0]);
-   
 const backgroundStyle = computed(() => {
-  if (character.value && character.value.thumbnail) {
+  if (character && character.thumbnail) {
     return {
-      'background-image': 'url(' + character.value.thumbnail.path + backgroundImageFormat + character.value.thumbnail.extension + ')'
+      'background-image': 'url(' + character.thumbnail.path + backgroundImageFormat + character.thumbnail.extension + ')'
     };
   } else {
     return {};
@@ -24,8 +37,8 @@ const backgroundStyle = computed(() => {
 });
 
 const imagePath = computed(() => {
-    if (character.value && character.value.thumbnail) {
-    return character.value.thumbnail.path + imageFormat + character.value.thumbnail.extension;
+    if (character && character.thumbnail) {
+    return character.thumbnail.path + imageFormat + character.thumbnail.extension;
   } else {
     return {};
   }

@@ -4,7 +4,6 @@ import TheFooter from "./components/Footer.vue";
 import Loading from "./components/Loading.vue";
 </script>
 
-
 <template>
     <div class="appContainer">
         <TheHeader class="header"/>

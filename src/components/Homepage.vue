@@ -3,10 +3,12 @@
     import CharacterCard from "./CharacterCard.vue";
     import { type CharacterObject } from '@/models/character.model';
     import { fetchCharacters } from '@/api/characters';
+    import { useCharactersStore } from "@/stores/characters";
     const {data} = await fetchCharacters();
-    console.log(data);
-    const characters: CharacterObject[] = reactive(data.results.filter((character: CharacterObject) => !character.thumbnail.path.endsWith("image_not_available")));
-   
+    const charactersData: CharacterObject[] = data.results;
+    const charactersStore = useCharactersStore();
+    charactersStore.characters.push(...charactersData);
+    const characters = reactive(charactersStore.charactersList);
 
 </script>
 

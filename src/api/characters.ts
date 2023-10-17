@@ -10,7 +10,7 @@ const params = new URLSearchParams({
     apikey: publicKey,
     ts: String(timestamp),
     hash: hash.toString(),
-    limit: "30",
+    limit: "60",
 });
 
 

@@ -2,23 +2,26 @@
 import TheHeader from "./components/Header.vue";
 import TheFooter from "./components/Footer.vue";
 import Loading from "./components/Loading.vue";
+
 </script>
 
 <template>
     <div class="appContainer">
         <TheHeader class="header"/>
-        <router-view v-slot="{ Component}">
-            <KeepAlive include="Homepage">
-                <Suspense timeout="0">
-                    <template #default>
-                        <component :is="Component"/>
-                    </template>
-                    <template #fallback>
-                        <Loading />
-                    </template>
-                </Suspense>     
-            </KeepAlive>
-         </router-view >
+        <router-view v-slot="{ Component }">
+            <template v-if="Component">
+                <keep-alive>
+                    <suspense>
+                        <component :is="Component"></component>
+                        <template #fallback>
+
+                            <Loading />
+
+                        </template>
+                    </suspense>
+                </keep-alive>
+            </template>
+        </router-view>
         <TheFooter class="footer"/>
     </div>
 </template>

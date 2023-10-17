@@ -20,9 +20,6 @@ if(characterFromStore) {
     character = reactive(data.results[0]);
 }
 
-console.log(characterIdString);
-console.log(character);
-
 const backgroundImageFormat = "/landscape_incredible.";
 const imageFormat = "/portrait_incredible."
 

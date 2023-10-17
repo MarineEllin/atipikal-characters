@@ -5,7 +5,7 @@ import CharacterDetails from "./components/CharacterDetails.vue";
 export const routes: RouteRecordRaw[] = [
     {
         path: "/",
-        component: Homepage
+        component: Homepage,
     },
     {
         path: "/details/:characterId",

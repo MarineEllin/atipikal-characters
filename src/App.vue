@@ -9,7 +9,7 @@ import Loading from "./components/Loading.vue";
         <TheHeader class="header"/>
         <router-view v-slot="{ Component }">
             <template v-if="Component">
-                <keep-alive>
+                <keep-alive include="Homepage">
                     <suspense>
                         <component :is="Component"></component>
                         <template #fallback>

@@ -107,15 +107,16 @@ const imagePath = computed(() => {
                 gap: 20px;
             }
             .imageContainer {
-                max-width: 400px;
-                max-height: 600px;
+                width: 400px;
+                height: 600px;
+                flex: 0 0 auto;
                 @include mixin.xs-medium {
                         width: 220px;
                         height: 220px;
                     }
                 img {
                     width: 400px;
-                    height: 100%;
+                    height: 600px;
                     object-fit: cover;
                     border-radius: var(--border-radius);
                     @include mixin.xs-medium {

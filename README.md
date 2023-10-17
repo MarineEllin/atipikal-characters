@@ -31,8 +31,8 @@ npm install
 
 ```sh
 In the .env file -> add the Marvel API KEY
-VITE_PRIVATE_KEY= <YOUR PRIVATE KEY>
 VITE_PUBLIC_KEY= <YOUR PUBLIC KEY>
+VITE_PRIVATE_KEY= <YOUR PRIVATE KEY>
 ```
 
 ### Compile and Hot-Reload for Development
